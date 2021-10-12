@@ -1,0 +1,59 @@
+{
+    "name": "ChannelVidioSteramberBot",
+    "description": "A telegram bot to steram youtube live yt vidio etc In My TG Channel VC",
+    "logo": "https://telegra.ph/file/f7fd45bd57dbe5a14e0f3.jpg",
+    "keywords": [
+        "Py_TgCalls",
+        "Telegram Bot",
+        "Vidio Vc Steramer"
+    ],
+    "website": "https://t.me/AsmSafone",
+    "repository": "https://github.com/Achu2234/ChannelVidioSteramberBot",
+    "success_url": "https://t.me/AsmSafone",
+    "env": {
+        "API_ID": {
+            "description": "Your APP_ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @botfather",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "ADMIN": {
+            "description":"Add Your User ID"
+        },
+        "CHANNEL": {
+            "description": "your channel id",
+            "value": ""
+         },
+        "SUDO_USERS": {
+            "description": "list of user ids to be added to sudo member list",
+            "required": true
+
+         }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
